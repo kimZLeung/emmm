@@ -52,8 +52,8 @@ router2DepPlugin.prototype.apply = function (compiler) {
       for (var filename in compilation.assets) {
         if (filename.includes(bp)) {
           var chunkNames = filename.split('.')
-          // var chunkName = chunkNames[3] + '.' + chunkNames[chunkNames.length - 1]
-          var chunkName = 'cluster' + '.' + chunkNames[chunkNames.length - 1]
+          var chunkName = chunkNames[3] + '.' + chunkNames[chunkNames.length - 1]
+//           var chunkName = 'cluster' + '.' + chunkNames[chunkNames.length - 1]
           files += ('"' + chunkName + '"' + ': ' + '"' + filename + '"' + ',\n')
         }
       }
